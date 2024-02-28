@@ -1,0 +1,49 @@
+---
+type Props = {
+title:string,
+footer:string
+}
+
+const {title, footer} = Astro.props
+
+---
+<section>
+    <header>
+        <h2>{title}</h2>
+    </header>
+    <main>
+        <slot/>
+    </main>
+    <footer>
+        <span>{footer}</span>
+    </footer>
+</section>
+
+<style>
+section {
+    background-color: rgba(169, 169, 169, 0.1); /* Gris casi transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 20px; /* Margen exterior */
+    text-align: center; /* Centra el texto */
+    width: 512px;
+	max-width: calc(100% - 2rem);
+}
+
+header {
+    border-bottom: 1px solid #ccc; /* Borde inferior */
+    padding-bottom: 10px; /* Espaciado interno inferior */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+h2 {
+    margin: 0; /* Eliminar margen del título */
+}
+
+footer {
+    border-top: 1px solid #ccc; /* Borde superior */
+    padding-top: 10px; /* Espaciado interno superior */
+    margin-top: 10px; /* Margen superior */
+}
+</style>

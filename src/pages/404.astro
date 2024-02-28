@@ -1,0 +1,57 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import img from '../../public/images/404.png'
+
+---
+
+<Layout title="PrometeoDigital">
+		<header>
+			<h1>Error</h1>
+			<h2>La pagina que estas Buscando no existe</h2>
+		</header>
+		<main>
+			<img src=`${img.src}` alt="imagen de un hombre sentado en la computadora viendo el numero 404">
+		</main>
+		<footer>
+			<h3>Prueba otra vez o vuelve al Inicio </h3>
+			<h3><a href="./"> aquí</a></h3>
+		</footer>
+</Layout>
+
+<style>
+	main,header,footer{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: auto;
+		padding: 1rem;
+		width: 768px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	img {
+		aspect-ratio: 1/1;
+		width:512px;
+		max-width: calc(100% - 2rem);
+	}
+
+	a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 5px; /* Espaciado interno */
+    background-color: #808080; /* Color de fondo gris */
+    color: white; /* Color del texto */
+    border: 2px solid #808080; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+a:hover {
+    background-color: #757575; /* Cambio de color de fondo al pasar el mouse */
+    border-color: #757575; /* Cambio de color del borde al pasar el mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+</style>

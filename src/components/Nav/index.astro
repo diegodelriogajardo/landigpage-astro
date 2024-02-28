@@ -1,0 +1,60 @@
+---
+type Props = {
+
+}
+
+const {} = Astro.props
+
+---
+
+    <nav>
+        <a href="/contacto" target="_blank" class="nav-button">Contacto</a>
+        <a href="/Sobre-nosotros" target="_blank" class="nav-button">Sobre nosotros</a>
+        <a href="/Valores" target="_blank" class="nav-button">Valores</a>
+    </nav>
+
+<style>
+      @media screen and (max-width: 768px) {
+        .nav-button {
+    margin: 0 3px;
+    padding: 0px 2px;
+    font-size: 12px;
+    border-radius: 3px;
+    }
+}
+@media screen and (max-width: 768px) {
+        .nav-button {
+    margin: 0 3px;
+    padding: 0px 2px;
+    font-size: 12px;
+    border-radius: 3px;
+
+}
+}
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #393a3b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+</style>
