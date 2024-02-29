@@ -7,25 +7,43 @@ const {} = Astro.props
 
 ---
 <div class="login-form">
-    <form action="/tu_servicio_propio" method="post" id="loginForm">
-        <label for="username">Nombre de usuario:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required><br>
+    <form action="/" method="post" id="loginForm">
+        <div class="group-field">
+            <label for="dni">Rut (DNI)</label>
+            <input type="text" id="dni" name="dni" placeholder="xx.xxx.xxx-k" required>
+        </div>
+        <div class="group-field">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="@Pepo123" required>
+        </div>
         <button type="submit" class="button" >Ingresar</button>
     </form>
-    <div>
-        ¿No tienes cuenta? <a class="button" href="/registro">Regístrate</a>
+    <div class="group-field">
+        <label>¿No tienes cuenta? </label>
+        <a class="button" href="/registro">Regístrate</a>
     </div>
 </div>
 
 <style>
+    form{
+        margin-bottom: 20px;
+    }
+    .group-field {
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+        gap: 5px;
+    }
    .login-form {
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+        padding: 10px;
         max-width: 300px;
-        margin: 50px auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        border: 2px solid #cccccc38;
+        border-radius: 15px;
         background-color: transparent;
     }
     .login-form input[type="text"],
@@ -37,23 +55,31 @@ const {} = Astro.props
         border-radius: 3px;
         box-sizing: border-box;
     }
-
     .button  {
         font-size: medium;
         text-align: center;
         margin-top: 10px;
         display: inline-block;
         padding: 2px 7px;
-        border: 2px solid #4CAF50;
+        border: 2px solid #9e9e9e9d;
         border-radius: 3px;
-        background-color: white;
-        color: #4CAF50;
+        background-color:  #393a3b;
+        color: white;
         text-decoration: none;
-        transition: all 0.3s ease;
+        transition: background-color 0.3s;
     }
     .button:hover {
-        background-color: #4CAF50;
+        background-color: #9e9e9e9d;
         color: white;
         
     }
+    @media screen and (max-width: 767px) {
+		/* Estilos para pantallas pequeñas aquí */
+		
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1023px) {
+		/* Estilos para pantallas medianas aquí */
+		
+	}
 </style>

@@ -1,39 +1,62 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Card from'@/components/Card/index.astro';
-import Login from '@/components/Login/index.astro';
-import Nav from '@/components/Nav/index.astro';
+import Layout from "@/layouts/Layout.astro";
+import Card from "@/components/Card/index.astro";
+import Login from "@/components/Login/index.astro";
+import Nav from "@/components/Nav/index.astro";
 ---
 
 <Layout title="PrometeoDigital">
 	<header>
 		<h1>Prometeo Digital</h1>
-		<Nav/>
+		<Nav />
 	</header>
 	<main>
-		<Card title='Bienvenido' footer='Trabajemos juntos'>
+		<Card title="Bienvenido" footer="Trabajemos juntos">
 			<Login />
 		</Card>
 	</main>
-
 </Layout>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1rem;
-		width: 768px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+		padding-top: 10%;
+		display: flex;
+		place-content: center;
+		place-items: center;
+		width: 100%;
 	}
+
 	header {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
-		align-items: center;
+		place-content: center;
 		text-align: center;
+		width: 100%;
+		gap:100px;
+	}
+	h1 {
+		text-shadow: 8px 8px 10px #0000008c;
+		font-size: 100px;
+	}
+	@media screen and (max-width: 767px) {
+		/* Estilos para pantallas pequeñas aquí */
+		h1 {
+			text-shadow: 4px 4px 5px #0000008c;
+			font-size: 29px;
+		}
+		header {
+			gap: 30px;
+		}
 	}
 
+	@media screen and (min-width: 768px) and (max-width: 1023px) {
+		/* Estilos para pantallas medianas aquí */
+		h1 {
+			text-shadow: 6px 6px 8px #0000008c;
+			font-size: 49px;
+		}
+		header {
+			gap: 60px;
+		}
+	}
 </style>
