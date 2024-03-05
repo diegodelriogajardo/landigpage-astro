@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Card from "@/components/Card/index.astro";
+import ContactForm from "@/components/ContactForm/index.astro";
+---
+
+<Layout title="PrometeoDigital">
+	<header>
+		<h1>Facilitate la vida</h1>
+		<h2>Aumenta tu visibilidad en linea</h2>
+	</header>
+	<main>
+		<Card
+			title="¡ Contáctanos !"
+			footer="tu contacto sera atendido a la brevedad"
+		>
+			<ContactForm />
+		</Card>
+	</main>
+</Layout>
+
+<style>
+	header {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		width: 50%;
+		gap: 60px;
+	}
+	h1 {
+		text-shadow: 8px 8px 10px #0000008c;
+		font-size: 100px;
+	}
+	main {
+		width: 50%;
+		display: flex;
+		place-content: center;
+	}
+</style>
